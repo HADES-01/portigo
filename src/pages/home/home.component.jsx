@@ -2,7 +2,9 @@ import React from "react";
 import "./home.styles.scss";
 
 function Home() {
-  return <div></div>;
+  return <div className="home">
+    Hello
+  </div>;
 }
 
-export default Home.component;
+export default Home;
