@@ -1,0 +1,28 @@
+@import "/src/styles/_colors.scss";
+
+.wallet {
+  &__header {
+    background-color: $color-secondary;
+    font-size: 2rem;
+    font-weight: $font-bold;
+    text-align: center;
+    padding: 0.6rem 0;
+  }
+  &__money {
+    border: 6px $color-tertiary-light solid;
+    outline: 8px $color-primary-light solid;
+    border-radius: 50%;
+    height: 40vh;
+    width: 40vh;
+    color: $color-tertiary-light;
+    margin: 40px auto;
+    position: relative;
+    &-left {
+      position: absolute;
+      font-size: 3rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

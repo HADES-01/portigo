@@ -1,0 +1,15 @@
+@import "/src/styles/colors";
+@import url("https://fonts.googleapis.com/css2?family=Finlandica:ital@1&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: $font-size;
+  color: $font-color;
+  font-family: "Finlandica", sans-serif;
+  background-color: $bg-color;
+}
