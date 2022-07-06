@@ -1,0 +1,95 @@
+@import "/src/styles/colors";
+
+.shops {
+  &__header {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 4rem;
+      text-align: center;
+      text-transform: none;
+      color: $color-tertiary-light;
+      // text-shadow: 0 0 5px white;
+    }
+  }
+  &__buttons {
+    height: 7vh;
+    width: 100%;
+    button {
+      font-family: $font-family;
+      padding: .5rem;
+      // height: 100%;
+      width: 25%;
+      // border: 1px $color-primary-li solid;
+      border: none;
+      background-color: $color-primary;
+      // color: $color-tertiary;
+      color: #eee;
+      font-weight: $font-bold;
+      font-size: 0.8rem;
+      opacity: 0.6;
+      &.selected {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__container {
+    height: 72vh;
+  }
+
+  &__list {
+    background-color: $font-color;
+    color: $bg-color;
+    height: 90%;
+    border-top: 4px $color-tertiary-light solid;
+    overflow: scroll;
+    margin-top: -6px;
+    margin-bottom: 4vh;
+    &-item {
+      display: flex;
+      height: 20%;
+      align-items: center;
+      padding: 10px 5px;
+      justify-content: space-between;
+      img {
+        width: 12%;
+      }
+      .shops__info {
+        padding: 5px 10px;
+        width: 60%;
+        h6 {
+          font-size: 1.5rem;
+        }
+        & > p {
+          // color: #ff4466;
+        }
+      }
+      & > p {
+        width: 20%;
+        color: #45cd56;
+      }
+    }
+  }
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    // margin-bottom: 8px;
+    h3 {
+      margin-right: 40px;
+      font-size: 2rem;
+      position: relative;
+      padding: 5px 15px;
+      color: $color-tertiary-light;
+      &.selected {
+        border-radius: 5px;
+        color: $color-primary;
+        background-color: $font-color;
+        border: 4px $color-tertiary-light solid;
+        border-bottom: 4px $font-color solid;
+      }
+    }
+  }
+}
