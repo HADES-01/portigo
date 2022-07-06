@@ -8,13 +8,12 @@ import GamePage from "./pages/game";
 
 function App() {
   return (
-    <BrowserRouter basename="portigo/">
+    <BrowserRouter>
       <Routes>
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/shops" element={<Shops />} />
         <Route exact path="/" element={<Home />} />
         <Route exact path="/library" element={<Library />} />
-        <Route exact path="/wallet" element={<Wallet />} />
         <Route exact path="/gamePage" element={<GamePage />} />
       </Routes>
     </BrowserRouter>
