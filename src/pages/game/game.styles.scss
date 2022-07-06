@@ -18,6 +18,27 @@
     margin-top: 2rem;
 }
 
+.ctaContainer::before {
+    content: "";
+    height: 2px;
+    width: 90%;
+    background-color: #eee;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+}
+
+.ctaContainer > p::before {
+    height: 2px;
+    width: 90%;
+    background-color: $color-secondary-dark;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+}
+
 .ctaAction {
     color: $color-secondary-dark !important;
     text-decoration: none;

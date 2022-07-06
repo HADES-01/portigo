@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./game.styles.scss";
 import { useIdleTimer } from "react-idle-timer";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Link from '@mui/joy/Link';
 
@@ -61,9 +60,9 @@ const GamePage = () => {
         height="100vh"
         className="miniGameFrame"
         allow="fullscreen; autoplay; encrypted-media"
-        src="https://games.construct.net/769/latest"
+        src="https://games.construct.net/4032/latest"
         frameBorder="0"
-        allowFullScreen="true"
+        allowFullScreen={true}
         msallowfullscreen="true"
         mozallowfullscreen="true"
         webkitallowfullscreen="true"
