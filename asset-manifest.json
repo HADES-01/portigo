@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portigo/static/css/main.501daab3.css",
-    "main.js": "/portigo/static/js/main.2fc571bb.js",
+    "main.js": "/portigo/static/js/main.453b21e5.js",
     "static/js/787.20fee0b9.chunk.js": "/portigo/static/js/787.20fee0b9.chunk.js",
     "static/media/GMR_logo.png": "/portigo/static/media/GMR_logo.002e92abf0978a3a8a3e.png",
     "static/media/controller.webp": "/portigo/static/media/controller.f9c67c7163e13902afd0.webp",
     "index.html": "/portigo/index.html",
     "main.501daab3.css.map": "/portigo/static/css/main.501daab3.css.map",
-    "main.2fc571bb.js.map": "/portigo/static/js/main.2fc571bb.js.map",
+    "main.453b21e5.js.map": "/portigo/static/js/main.453b21e5.js.map",
     "787.20fee0b9.chunk.js.map": "/portigo/static/js/787.20fee0b9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.501daab3.css",
-    "static/js/main.2fc571bb.js"
+    "static/js/main.453b21e5.js"
   ]
 }
