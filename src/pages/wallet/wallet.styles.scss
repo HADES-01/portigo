@@ -2,27 +2,103 @@
 
 .wallet {
   &__header {
-    background-color: $color-secondary;
+    background-color: $color-primary-light;
     font-size: 2rem;
     font-weight: $font-bold;
     text-align: center;
     padding: 0.6rem 0;
   }
   &__money {
-    border: 6px $color-tertiary-light solid;
-    outline: 8px $color-primary-light solid;
+    .primary,
+    .secondary,
+    .tertiary {
+      position: absolute;
+      inset: 0;
+      max-height: 110%;
+      max-width: 110%;
+    }
+    .secondary {
+      inset: 5%;
+      height: 90%;
+      width: 90%;
+    }
+    .tertiary {
+      height: 110%;
+      width: 110%;
+      inset: -5%;
+    }
     border-radius: 50%;
-    height: 40vh;
-    width: 40vh;
+    height: 90vw;
+    width: 90vw;
+    max-width: 400px;
+    max-height: 400px;
     color: $color-tertiary-light;
     margin: 40px auto;
     position: relative;
+    text-align: center;
     &-left {
       position: absolute;
       font-size: 3rem;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -60%);
+    }
+  }
+  &__desc {
+    padding: 0 1.75rem;
+    margin: 3.5rem 0;
+    // height: 100vh;
+    &-list {
+      list-style-type: none;
+      font-size: 1.25rem;
+      &-item {
+        &:nth-child(1) {
+          &::before {
+            background-color: #f43df6;
+          }
+        }
+        &:nth-child(3) {
+          &::before {
+            background-color: #ff4466;
+          }
+        }
+        position: relative;
+        margin-bottom: 0.75rem;
+        &:before {
+          content: "";
+          background-color: #45cd56;
+          font-weight: bold;
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          position: absolute;
+          left: 0;
+          top: 10%;
+          border-radius: 50%;
+          margin-left: -1.25rem;
+        }
+        span {
+          font-size: 1rem;
+          margin-left: 1rem;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  &__buttons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    button {
+      font-family: $font-family;
+      padding: 1rem;
+      width: 50%;
+      border: 1px $color-primary-dark solid;
+      background-color: $color-primary-light;
+      // color: $color-tertiary;
+      color: #eee;
+      font-weight: $font-bold;
+      font-size: 1.25rem;
     }
   }
 }
