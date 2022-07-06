@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import controller from "../../assets/controller.webp";
 import Logo2 from "../../assets/GMR_logo.png";
 import "./home.styles.scss";
@@ -19,7 +20,7 @@ function Home() {
           <h4>Portigo</h4>
           <p>Gaming has never been this simple.</p>
         </div>
-        <button>Get Started</button>
+        <Link to="/library" className="home__link">Get Started</Link>
       </div>
     </div>
   );

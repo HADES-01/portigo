@@ -1,0 +1,36 @@
+@import "/src/styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.library {
+    background-color: $color-primary-dark;
+    // height: 100vh;
+    padding: 20px;
+    word-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.heading {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;   
+}
+
+.heading + p {
+    position: relative;
+    color: white;
+    margin-top: 22px;
+    margin-bottom: 1.2rem;
+    font-size: 20px;
+}
+
+.heading+p::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    // right: 0;
+    // left: 0;
+    background-color: #fff;
+    height: 1px;
+    width: 10%
+}
