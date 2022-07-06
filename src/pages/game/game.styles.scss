@@ -1,0 +1,24 @@
+@import "/src/styles/colors";
+
+.gameContainer {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.miniGameFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ctaContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.ctaAction {
+    color: $color-secondary-dark !important;
+    text-decoration: none;
+}

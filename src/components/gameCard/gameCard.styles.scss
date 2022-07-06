@@ -1,0 +1,26 @@
+@import "/src/styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.gameDetails {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gameThumbnail {
+    border-radius: 12px 12px 0 0;
+    width: 50%;
+    height: 50%;
+    transform: scale(0.8);
+}
+
+.gameName {
+    font-size: 17px !important;
+    color: #000 !important;
+}
+
+.gameCategory {
+    color: #b1b8bc !important; 
+    font-size: 10px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
