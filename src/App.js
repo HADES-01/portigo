@@ -6,7 +6,7 @@ import "./App.scss";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="portigo/">
       <Routes>
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/shops" element={<Shops />} />
