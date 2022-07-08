@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portigo/static/css/main.365b1e5b.css",
-    "main.js": "/portigo/static/js/main.52c2892e.js",
+    "main.js": "/portigo/static/js/main.e98e8671.js",
     "static/js/787.20fee0b9.chunk.js": "/portigo/static/js/787.20fee0b9.chunk.js",
     "static/media/tgp-ad-banner.png": "/portigo/static/media/tgp-ad-banner.8a27f5a10b0ae5abe20e.png",
     "static/media/manuganu.png": "/portigo/static/media/manuganu.0ff3fa79415b1a221bd6.png",
@@ -38,11 +38,11 @@
     "static/media/candyCrush.webp": "/portigo/static/media/candyCrush.243afcad51b4d03b6183.webp",
     "index.html": "/portigo/index.html",
     "main.365b1e5b.css.map": "/portigo/static/css/main.365b1e5b.css.map",
-    "main.52c2892e.js.map": "/portigo/static/js/main.52c2892e.js.map",
+    "main.e98e8671.js.map": "/portigo/static/js/main.e98e8671.js.map",
     "787.20fee0b9.chunk.js.map": "/portigo/static/js/787.20fee0b9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.365b1e5b.css",
-    "static/js/main.52c2892e.js"
+    "static/js/main.e98e8671.js"
   ]
 }
