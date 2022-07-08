@@ -16,6 +16,7 @@ const GamePage = () => {
     position: "absolute",
     top: "50%",
     left: "50%",
+    color: "#fff",
     transform: "translate(-50%, -50%)",
     height: "20%",
     width: "90%",
