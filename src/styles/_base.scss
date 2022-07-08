@@ -13,4 +13,7 @@ body {
   font-family: $font-family;
   background-color: $bg-color;
   overflow: scroll;
+  @media (max-width:300px) {
+    font-size: 10px;
+  }
 }

@@ -1,15 +1,41 @@
-$color-primary: #120a23;
-$color-primary-dark: #0d0028;
-$color-primary-light: #40247c;
-$color-secondary: #d500fc;
-$color-secondary-dark: #eb7aff;
-$color-secondary-light: #9f55ad;
-$color-tertiary: #2dffff;
-$color-tertiary-dark: #63c2c2;
-$color-tertiary-light: #62fffe;
-$font-color: #eee;
-$bg-color: $color-primary;
-$font-size: 16px;
-$font-bold: 600;
-$font-light: 200;
-$font-family: "Finlandica", sans-serif;
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TT Firs Neue Thin"), local("TT-Firs-Neue-Thin"),
+    url("TTFirsNeue-Thin.woff2") format("woff2"),
+    url("TTFirsNeue-Thin.woff") format("woff"),
+    url("TTFirsNeue-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TT Firs Neue Regular"), local("TT-Firs-Neue-Regular"),
+    url("TTFirsNeue-Regular.woff2") format("woff2"),
+    url("TTFirsNeue-Regular.woff") format("woff"),
+    url("TTFirsNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TT Firs Neue Bold"), local("TT-Firs-Neue-Bold"),
+    url("TTFirsNeue-Bold.woff2") format("woff2"),
+    url("TTFirsNeue-Bold.woff") format("woff"),
+    url("TTFirsNeue-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+$clr-primary: #dcb0ff;
+$clr-accent: #f6ff82;
+$clr-accent-2: #d2efff;
+$font-color: #34334b;
+// $font-color: black;
+$bg-color: #ededed;
+$font-size: 14px;
+$ff-700: 700;
+$ff-400: 400;
+$ff-300: 300;
+$font-family: "TT Firs Neue", sans-serif;
