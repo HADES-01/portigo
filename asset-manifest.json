@@ -1,37 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.df85d1e0.css",
-    "main.js": "/static/js/main.473fbf04.js",
-    "static/js/787.20fee0b9.chunk.js": "/static/js/787.20fee0b9.chunk.js",
-    "static/media/topSpeed.webp": "/static/media/topSpeed.183e11b4f0ead6c6e1ba.webp",
-    "static/media/crashlands.webp": "/static/media/crashlands.38188196983bd73931df.webp",
-    "static/media/GMR_logo.png": "/static/media/GMR_logo.002e92abf0978a3a8a3e.png",
-    "static/media/controller.webp": "/static/media/controller.f9c67c7163e13902afd0.webp",
-    "static/media/candyCrush.webp": "/static/media/candyCrush.243afcad51b4d03b6183.webp",
-    "static/media/guardianTales.webp": "/static/media/guardianTales.72bc4c0b827e81d015b9.webp",
-    "static/media/trafficRider.webp": "/static/media/trafficRider.5a8eac1caf52be197777.webp",
-    "static/media/coc.webp": "/static/media/coc.bdc8dcdea6096f70259d.webp",
-    "static/media/pokemonGo.webp": "/static/media/pokemonGo.c9c8fb9559a2c65e2331.webp",
-    "static/media/horizonChase.webp": "/static/media/horizonChase.1c1e31ed1528fa04d92d.webp",
-    "static/media/hcr.webp": "/static/media/hcr.38de6e5a5b672921951a.webp",
-    "static/media/evoland.webp": "/static/media/evoland.6ae3dd1d2838e2932ab9.webp",
-    "static/media/IntoTheDead.webp": "/static/media/IntoTheDead.5690a23d81867e58815d.webp",
-    "static/media/angryBirds.webp": "/static/media/angryBirds.6953dd4788297d29fa28.webp",
-    "static/media/cod.webp": "/static/media/cod.0686fe8f92630661040d.webp",
-    "static/media/drDriving.webp": "/static/media/drDriving.4469397d59ef907088f0.webp",
-    "static/media/asphalt9.webp": "/static/media/asphalt9.21c5b5b2399f56ef5087.webp",
-    "static/media/80Days.webp": "/static/media/80Days.e7995fdf9d732bf68534.webp",
-    "static/media/brawlStars.webp": "/static/media/brawlStars.725a0d08a801fb344076.webp",
-    "static/media/csr2.webp": "/static/media/csr2.726ae2eccb47dac00df3.webp",
-    "static/media/genshinImpact.webp": "/static/media/genshinImpact.08a125471355895fd000.webp",
-    "static/media/blackmoor.webp": "/static/media/blackmoor.faec1500ce9f89bd77ba.webp",
-    "index.html": "/index.html",
-    "main.df85d1e0.css.map": "/static/css/main.df85d1e0.css.map",
-    "main.473fbf04.js.map": "/static/js/main.473fbf04.js.map",
-    "787.20fee0b9.chunk.js.map": "/static/js/787.20fee0b9.chunk.js.map"
+    "main.css": "/portigo/static/css/main.501daab3.css",
+    "main.js": "/portigo/static/js/main.2fc571bb.js",
+    "static/js/787.20fee0b9.chunk.js": "/portigo/static/js/787.20fee0b9.chunk.js",
+    "static/media/GMR_logo.png": "/portigo/static/media/GMR_logo.002e92abf0978a3a8a3e.png",
+    "static/media/controller.webp": "/portigo/static/media/controller.f9c67c7163e13902afd0.webp",
+    "index.html": "/portigo/index.html",
+    "main.501daab3.css.map": "/portigo/static/css/main.501daab3.css.map",
+    "main.2fc571bb.js.map": "/portigo/static/js/main.2fc571bb.js.map",
+    "787.20fee0b9.chunk.js.map": "/portigo/static/js/787.20fee0b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df85d1e0.css",
-    "static/js/main.473fbf04.js"
+    "static/css/main.501daab3.css",
+    "static/js/main.2fc571bb.js"
   ]
 }
