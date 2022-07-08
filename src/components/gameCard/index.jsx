@@ -10,12 +10,12 @@ const GameCard = ({ item }) => {
     <Card column key={item.title} className="library__card" id="card">
       <img
         className="library__card-thumbnail"
-        src={`${item.src}?h=1800`}
-        srcSet={`${item.src}?h=180&fit=crop&auto=format&dpr=2 2x`}
+        src={`${item.imageSrc}?h=1800`}
+        srcSet={`${item.imageSrc}?h=180&fit=crop&auto=format&dpr=2 2x`}
         alt={item.title}
       />
       <Box className="library__card-details">
-        <Link overlay underline="none" href="/gamePage">
+        <Link overlay underline="none" href={item.gameSrc}>
           <p className="library__card-name" fontWeight="md">
             {item.gameName}
           </p>
