@@ -4,6 +4,7 @@
   font-family: "Roboto", "sans-serif";
   background-color: black;
   height: 100vh;
+  color: white;
 }
 
 .miniGameFrame {
@@ -157,6 +158,6 @@
 // }
 
 .ctaAction {
-  // color: $color-secondary-dark !important;
+  color: $clr-primary !important;
   text-decoration: none;
 }
