@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/portigo/static/css/main.365b1e5b.css",
-    "main.js": "/portigo/static/js/main.e98e8671.js",
+    "main.css": "/portigo/static/css/main.3327863c.css",
+    "main.js": "/portigo/static/js/main.706e8142.js",
     "static/js/787.20fee0b9.chunk.js": "/portigo/static/js/787.20fee0b9.chunk.js",
-    "static/media/tgp-ad-banner.png": "/portigo/static/media/tgp-ad-banner.8a27f5a10b0ae5abe20e.png",
     "static/media/manuganu.png": "/portigo/static/media/manuganu.0ff3fa79415b1a221bd6.png",
     "static/media/trafficRider.png": "/portigo/static/media/trafficRider.262d9cc5656068d3e15e.png",
     "static/media/horizonChase.png": "/portigo/static/media/horizonChase.3f40594b3e1624cc8b38.png",
@@ -26,6 +25,7 @@
     "static/media/TTFirsNeue-Thin.woff": "/portigo/static/media/TTFirsNeue-Thin.ffd755f65def5e8c7699.woff",
     "static/media/TTFirsNeue-Bold.woff": "/portigo/static/media/TTFirsNeue-Bold.5898e2d9776b42b3ff85.woff",
     "static/media/TTFirsNeue-Regular.woff": "/portigo/static/media/TTFirsNeue-Regular.6f44931576176c0be470.woff",
+    "static/media/tgp-ad-banner.png": "/portigo/static/media/tgp-ad-banner.8b2cbc6669a046903bd8.png",
     "static/media/GMR_logo.png": "/portigo/static/media/GMR_logo.002e92abf0978a3a8a3e.png",
     "static/media/controller.webp": "/portigo/static/media/controller.f9c67c7163e13902afd0.webp",
     "static/media/brawlStars.png": "/portigo/static/media/brawlStars.171648c4329aa112b654.png",
@@ -37,12 +37,12 @@
     "static/media/genshinImpact.webp": "/portigo/static/media/genshinImpact.d10684ec29f75b73f87d.webp",
     "static/media/candyCrush.webp": "/portigo/static/media/candyCrush.243afcad51b4d03b6183.webp",
     "index.html": "/portigo/index.html",
-    "main.365b1e5b.css.map": "/portigo/static/css/main.365b1e5b.css.map",
-    "main.e98e8671.js.map": "/portigo/static/js/main.e98e8671.js.map",
+    "main.3327863c.css.map": "/portigo/static/css/main.3327863c.css.map",
+    "main.706e8142.js.map": "/portigo/static/js/main.706e8142.js.map",
     "787.20fee0b9.chunk.js.map": "/portigo/static/js/787.20fee0b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.365b1e5b.css",
-    "static/js/main.e98e8671.js"
+    "static/css/main.3327863c.css",
+    "static/js/main.706e8142.js"
   ]
 }
