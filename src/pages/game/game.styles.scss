@@ -32,7 +32,7 @@
 .ctaContainer > p::before {
     height: 2px;
     width: 90%;
-    background-color: $color-secondary-dark;
+    // background-color: $color-secondary-dark;
     position: absolute;
     bottom: 5%;
     left: 5%;
@@ -40,6 +40,6 @@
 }
 
 .ctaAction {
-    color: $color-secondary-dark !important;
+    // color: $color-secondary-dark !important;
     text-decoration: none;
 }

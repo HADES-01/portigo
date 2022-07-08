@@ -1,11 +1,32 @@
 @import "/src/styles/colors";
 
-.gameCategoryName {
-    color: $color-tertiary;
-    margin: 2rem 0rem 1.2rem 0;
-    font-size: 20px;
-}
+.library__grid {
+  padding-top: 30px;
 
-.libraryCarousel {
-    width: 100%;
+  &-header {
+    font-size: 1.15em;
+    padding: 0.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: 0.8em;
+      color: $clr-primary;
+    }
+  }
+  &-carousel {
+    display: flex;
+    gap: 1px;
+    // overflow-y: scroll;
+    // overflow-x: visible;
+    z-index: 2;
+    // overflow: auto;
+    scroll-snap-type: x mandatory;
+    & > * {
+      scroll-snap-align: center;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

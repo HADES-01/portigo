@@ -1,115 +1,85 @@
-import { useState } from "react";
 import "./shops.styles.scss";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
 import ComputerIcon from "@mui/icons-material/Computer";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { shops } from "../../data/shopList";
 
 function Shops() {
-  const [selected, setSelected] = useState(true);
-  const shops = [
-    {
-      name: "Starbucks",
-      src: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png",
-      add: "Shop No 14 | GATE 2",
-      points: 3450,
-    },
-    {
-      name: "Pizza Hut",
-      src: "https://upload.wikimedia.org/wikipedia/sco/thumb/d/d2/Pizza_Hut_logo.svg/2177px-Pizza_Hut_logo.svg.png",
-      add: "Shop No 16 | GATE 3",
-      points: 345,
-    },
-    {
-      name: "Burger King",
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Burger_King_1969_logo.svg/1200px-Burger_King_1969_logo.svg.png",
-      add: "Shop No 20 | GATE 1",
-      points: 2186,
-    },
-    {
-      name: "McDonald's",
-      src: "https://upload.wikimedia.org/wikipedia/commons/3/32/McDonald%27s_1968_logo.png",
-      add: "Shop No 26 | GATE 2",
-      points: 4995,
-    },
-    {
-      name: "Taco Bell",
-      src: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/Taco_Bell_2016.svg/1200px-Taco_Bell_2016.svg.png",
-      add: "Shop No 22 | GATE 2",
-      points: 865,
-    },
-    {
-      name: "Haldiram's",
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Haldiram%27s_Logo_SVG.svg/1200px-Haldiram%27s_Logo_SVG.svg.png",
-      add: "Shop 10 | Gate 3",
-      points: 789,
-    },
-    {
-      name: "Pizza Hut",
-      src: "https://upload.wikimedia.org/wikipedia/sco/thumb/d/d2/Pizza_Hut_logo.svg/2177px-Pizza_Hut_logo.svg.png",
-      add: "Shop No 16 | GATE 3",
-      points: 345,
-    },
-    {
-      name: "Starbucks",
-      src: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png",
-      add: "Shop No 14 | GATE 2",
-      points: 3450,
-    },
-  ];
+  
   return (
     <div className="shops">
       <div className="shops__header">
-        <h1>AIR Wallet</h1>
-      </div>
-      <div className="shops__container">
-        <div className="shops__tabs">
-          <h3
-            className={`${selected && "selected"} `}
-            onClick={() => setSelected(true)}
-          >
-            Coupons
-          </h3>
-          <h3
-            className={`${!selected && "selected"} `}
-            onClick={() => setSelected(false)}
-          >
-            Wallet
-          </h3>
+        <div className="shops__header-name">
+          <h3>Hello Sarang</h3>
+          <p>Happy New Year 🎉</p>
         </div>
-        <div className="shops__list">
+        <div className="shops__header-img">
+          <img
+            src="https://images.unsplash.com/photo-1450133064473-71024230f91b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3V5JTIwaW4lMjBibGFjayUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className="shops__coupons">
+        {shops.slice(0, 3).map((shop, idx) => (
+          <div className="shops__coupon" key={idx}>
+            <img src={shop.src} alt={shop.name} className="coupon-logo" />
+            <p className="coupon-name">{shop.name}</p>
+            <p className="coupon-location">{shop.add}</p>
+            <div className="coupon_bottom">
+              <p className="coupon-value">$ {shop.points}</p>
+              <p className="coupon-expiry">Exp. 06/26</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="shops__buttons">
+        <div className="shops__button">
+          <p className="button-icon">
+            <FastfoodIcon height={36} />
+          </p>
+          <p className="button-name">Food</p>
+        </div>
+        <div className="shops__button">
+          <p className="button-icon">
+            <CardGiftcardIcon />
+          </p>
+          <p className="button-name">Gifts</p>
+        </div>
+        <div className="shops__button">
+          <p className="button-icon">
+            <CheckroomIcon />
+          </p>
+          <p className="button-name">Clothes</p>
+        </div>
+        <div className="shops__button">
+          <p className="button-icon">
+            <ComputerIcon />
+          </p>
+          <p className="button-name">Tech</p>
+        </div>
+      </div>
+      <div className="shops__transactions">
+        <div className="shops__transactions-header">
+          <h3>Your Coupons</h3>
+          <ChevronRightIcon />
+        </div>
+        <div className="shops__transactions-list">
           {shops.map((shop, idx) => (
-            <div className="shops__list-item" key={idx}>
-              <img src={shop.src} alt="starbucks" />
-              <div className="shops__info">
-                <h6>{shop.name}</h6>
-                <p>{shop.add}</p>
+            <div className="shops__transactions-list-item" key={idx}>
+              <div className="img">
+                <img src={shop.src} alt="" />
               </div>
-              <p>{shop.points} pts</p>
+              <div className="details">
+                <p className="name">{shop.name}</p>
+                <p className="expiry">02 Jan, 2002</p>
+              </div>
+              <p className="value">$ {shop.points}</p>
             </div>
           ))}
         </div>
-      </div>
-      <div className="shops__buttons">
-        <button className="selected">
-          <FastfoodIcon /> <br />
-          Food
-        </button>
-        <button>
-          <CheckroomIcon />
-          <br />
-          Clothes
-        </button>
-        <button>
-          <CardGiftcardIcon />
-          <br />
-          Gifts
-        </button>
-        <button>
-          <ComputerIcon />
-          <br/>
-          Tech
-        </button>
       </div>
     </div>
   );
