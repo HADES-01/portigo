@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portigo/static/css/main.3327863c.css",
-    "main.js": "/portigo/static/js/main.706e8142.js",
+    "main.js": "/portigo/static/js/main.a5cce779.js",
     "static/js/787.20fee0b9.chunk.js": "/portigo/static/js/787.20fee0b9.chunk.js",
     "static/media/manuganu.png": "/portigo/static/media/manuganu.0ff3fa79415b1a221bd6.png",
     "static/media/trafficRider.png": "/portigo/static/media/trafficRider.262d9cc5656068d3e15e.png",
@@ -38,11 +38,11 @@
     "static/media/candyCrush.webp": "/portigo/static/media/candyCrush.243afcad51b4d03b6183.webp",
     "index.html": "/portigo/index.html",
     "main.3327863c.css.map": "/portigo/static/css/main.3327863c.css.map",
-    "main.706e8142.js.map": "/portigo/static/js/main.706e8142.js.map",
+    "main.a5cce779.js.map": "/portigo/static/js/main.a5cce779.js.map",
     "787.20fee0b9.chunk.js.map": "/portigo/static/js/787.20fee0b9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3327863c.css",
-    "static/js/main.706e8142.js"
+    "static/js/main.a5cce779.js"
   ]
 }
