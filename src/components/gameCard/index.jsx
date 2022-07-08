@@ -30,8 +30,8 @@ const GameCard = ({ item }) => {
             >
               <img
                 className="gameThumbnail"
-                src={`${item.src}?h=120&fit=crop&auto=format`}
-                srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
+                src={`${item.imageSrc}?h=120&fit=crop&auto=format`}
+                srcSet={`${item.imageSrc}?h=120&fit=crop&auto=format&dpr=2 2x`}
                 alt={item.title}
               />
             </AspectRatio>
@@ -39,7 +39,7 @@ const GameCard = ({ item }) => {
             <Link
               overlay
               underline="none"
-              href="/gamePage"
+              href={item.gameSrc}
               sx={{ color: 'text.tertiary' }}
             >
               <Typography className="gameName" fontWeight="md">{item.gameName}</Typography>
