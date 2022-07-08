@@ -2,15 +2,22 @@
 
 .gameContainer {
   font-family: "Roboto", "sans-serif";
+  background-color: black;
+  height: 100vh;
 }
 
 .miniGameFrame {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  height: 50%;
+  @media (orientation: landscape) {
+    height: 100%;
+  }
   width: 100%;
-  height: 100%;
-  pointer-events: all;
+  //   min-width: 100vw;
 }
 
 .modalBox {
@@ -37,7 +44,9 @@
 .adIcon {
   position: absolute;
   top: 4%;
-  right: 7%;
+  right: 5%;
+  z-index: 100;
+  color: white;
   transition: all 0.3s ease;
   transform: scale(1.5);
   animation: pulse 2s infinite;

@@ -59,6 +59,13 @@ const GamePage2 = () => {
 
   return (
     <div className="gameContainer">
+      <InfoOutlinedIcon
+        fontSize="large"
+        className="adIcon"
+        focusable={true}
+        style={show ? { display: "block" } : { display: "none" }}
+        onClick={onDisplayBannerShow}
+      />
       <iframe
         title="Mini Game"
         className="miniGameFrame"
@@ -69,12 +76,6 @@ const GamePage2 = () => {
       {/* <button className="adIcon" style={show ? {display: "block"} : {display: "none"}} onClick={onDisplayBannerShow}>
         {" "} */}
       {/* <div className="blob"> */}
-      <InfoOutlinedIcon
-        fontSize="large"
-        className="adIcon"
-        style={show ? { display: "block" } : { display: "none" }}
-        onClick={onDisplayBannerShow}
-      />
       {/* </div> */}
       {/* </button> */}
       <Modal open={open} aria-labelledby="time-up-modal">

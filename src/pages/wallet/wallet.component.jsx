@@ -37,7 +37,7 @@ function Wallet() {
         >
           <div className="wallet__money-expenses">
             <h3>
-              Expenses <ArrowDropDownIcon />
+              Balance <ArrowDropDownIcon />
             </h3>
             <p className="value">
               <span>$</span>1,684
