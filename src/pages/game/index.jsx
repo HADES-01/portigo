@@ -3,7 +3,7 @@ import "./game.styles.scss";
 import { useIdleTimer } from "react-idle-timer";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import Link from '@mui/joy/Link';
+import Link from "@mui/joy/Link";
 
 const GamePage = () => {
   const [elapsed, setElapsed] = useState(0);
@@ -17,7 +17,9 @@ const GamePage = () => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+    height: "20%",
     width: "90%",
+    minHeight: "150px",
     textAlign: "center",
     bgcolor: "#2c2f30",
     border: "2px solid #000",
@@ -30,31 +32,40 @@ const GamePage = () => {
     if (minutes >= 1) {
       handleOpen();
     }
-  }
+  };
 
-  const updateElapsed = () => {
-    
-  }
+  const updateElapsed = () => {};
 
   useEffect(() => {
     setElapsed(getElapsedTime());
     let minutes = Math.round(elapsed / 1000) / 60;
     setInterval(() => {
-      setElapsed(getElapsedTime())
-      if(minutes > 0.5) {
-        clearInterval(updateElapsed)
+      setElapsed(getElapsedTime());
+      if (minutes > 0.5) {
+        clearInterval(updateElapsed);
       }
     }, 1000);
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     // console.log(elapsed)
     checkModalOpen(elapsed);
-  },[elapsed])
+    // eslint-disable-next-line
+  }, [elapsed]);
 
   return (
     <div className="gameContainer">
       <iframe
+        title="Mini Game"
+        className="miniGameFrame"
+        src="https://freehtml5games.org/games/tomb-runner/index.html"
+        // width="800"
+        // height="600"
+        scrolling="none"
+        frameBorder="0"
+      ></iframe>
+      {/* <iframe
         title="Mini Game"
         width="100%"
         height="100vh"
@@ -70,17 +81,22 @@ const GamePage = () => {
         referrerPolicy="unsafe-url"
         sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups"
         scrolling="no"
-      ></iframe>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="time-up-modal"
-      >
+      ></iframe> */}
+      <Modal open={open} onClose={handleClose} aria-labelledby="time-up-modal">
         <Box sx={style}>
-          <p>Our Apologies, <br /> But your free gamplay time is over!</p>
+          <p>
+            Our Apologies, <br /> But your free gamplay time is over!
+          </p>
           <div className="ctaContainer">
-          <p><Link href="/wallet" className="ctaAction">Recharge here</Link> &amp; resume where you left off!</p>
-          <p>AIRwallet balance <span className="ctaAction">Rs.20</span></p>
+            <p className="hell">
+              <Link href="/wallet" className="ctaAction">
+                Recharge here
+              </Link>{" "}
+              &amp; resume where you left off!
+            </p>
+            <p>
+              AIRwallet balance: <span className="ctaAction">Rs.00</span>
+            </p>
           </div>
         </Box>
       </Modal>

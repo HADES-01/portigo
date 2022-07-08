@@ -1,45 +1,153 @@
 @import "/src/styles/colors";
 
 .gameContainer {
-    font-family: 'Roboto', 'sans-serif';
+  font-family: "Roboto", "sans-serif";
 }
 
 .miniGameFrame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+}
+
+.modalBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  min-height: 150px;
+  text-align: center;
 }
 
 .ctaContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 
-.ctaContainer::before {
-    content: "";
-    height: 2px;
-    width: 90%;
-    background-color: #eee;
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    right: 5%;
+.ctaContainer > p {
+  width: 38%;
 }
 
-.ctaContainer > p::before {
-    height: 2px;
-    width: 90%;
-    // background-color: $color-secondary-dark;
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    right: 5%;
+.adIcon {
+  position: absolute;
+  top: 4%;
+  right: 7%;
+  transition: all 0.3s ease;
+  transform: scale(1.5);
+  animation: pulse 2s infinite;
+  // color: #fff;
+  // border-radius: 50%;
+  // height: 50px;
+  // width: 50px;
+  // z-index: 1;
+  // background-color: transparent;
 }
+
+// .blob::before {
+//     content: "";
+//     position: absolute;
+//     top: 3%;
+//     right: 5%;
+//     z-index: 99;
+//     background-color: #fff;
+//     height: 50px;
+//     width: 50px;
+//     border-radius: 50%;
+//     opacity: 0.5    ;
+//     // box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+// 	// transform: scale(1);
+// 	animation: pulse 2s infinite;
+// }
+
+// .adIcon::before {
+//     content: "";
+//     background-color: white;
+//     opacity: 1;
+// 	border-radius: 50%;
+// 	// margin: 10px;
+// 	height: 50px;
+// 	width: 50px;
+//     position: absolute;
+//     top: 3%;
+//     right: 5%;
+
+//     box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+// 	transform: scale(1);
+// 	animation: pulse 2s infinite;
+// }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.25);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  background-color: lightgray;
+  color: skyblue;
+}
+
+.adBannerImage {
+  // position: absolute;
+  // top: 0;
+  height: 100%;
+  width: 100%;
+  // right: 0;
+}
+
+// .adIcon::before {
+//     content: "";
+//     background-color: red;
+//     border-radius: 50%;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+// }
+
+// .ctaContainer::before {
+//     content: "";
+//     height: 2px;
+//     width: 90%;
+//     background-color: #eee;
+//     position: absolute;
+//     bottom: 5%;
+//     left: 5%;
+//     right: 5%;
+//     z-index: 1;
+// }
+
+// .hell::before {
+//     height: 2px;
+//     width: 90%;
+//     background-color: red;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 99;
+// }
 
 .ctaAction {
-    // color: $color-secondary-dark !important;
-    text-decoration: none;
+  // color: $color-secondary-dark !important;
+  text-decoration: none;
 }
