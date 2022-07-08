@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import { useIdleTimer } from "react-idle-timer";
 import Modal from "@mui/material/Modal";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import adBanner from "../../images/tgp-ad-banner.png";
+import adBanner from "../../images/tgp-ad-banner.jpg";
 import CloseIcon from "@mui/icons-material/Close";
 // import Link from "@mui/joy/Link";
 // import { Player } from "video-react";
