@@ -4,11 +4,11 @@ import {
   buildStyles,
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import Link from "@mui/joy/Link";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
+import Link from "@mui/joy/Link";
 import "./wallet.styles.scss";
 import { useState } from "react";
 import { shops } from "../../data/shopList";
@@ -97,6 +97,11 @@ function Wallet() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="wallet__button">
+        <Link href="./shops">
+          <button>Get Coupons</button>
+        </Link>
       </div>
     </div>
   );

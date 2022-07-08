@@ -9,7 +9,7 @@ import GamePage2 from "./pages/game/gamePage2";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portigo">
       <Routes>
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/shops" element={<Shops />} />
