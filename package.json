@@ -2,7 +2,7 @@
   "name": "portigo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hades-01.github.io/",
+  "homepage": "https://hades-01.github.io/portigo/",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
