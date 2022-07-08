@@ -1,0 +1,19 @@
+@import "/src/styles/colors";
+
+.library {
+  background-color: white;
+  padding: 4vw;
+  overflow: hidden;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-bottom: 30px;
+    h3 {
+      padding: 0 20px;
+      text-align: center;
+      font-size: 1.5em;
+      // width: 80%;
+    }
+  }
+}

@@ -1,94 +1,204 @@
 @import "/src/styles/colors";
 
 .shops {
+  // background-color: white;
+  width: 100vw;
+  padding: 4vw;
+  padding-bottom: 0;
   &__header {
-    height: 20vh;
+    // width: 90%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    h1 {
-      font-size: 4rem;
-      text-align: center;
-      text-transform: none;
-      color: $color-tertiary-light;
-      // text-shadow: 0 0 5px white;
-    }
-  }
-  &__buttons {
-    height: 7vh;
-    width: 100%;
-    button {
-      font-family: $font-family;
-      padding: .5rem;
-      // height: 100%;
-      width: 25%;
-      // border: 1px $color-primary-li solid;
-      border: none;
-      background-color: $color-primary;
-      // color: $color-tertiary;
-      color: #eee;
-      font-weight: $font-bold;
-      font-size: 0.8rem;
-      opacity: 0.6;
-      &.selected {
-        opacity: 1;
+    &-name {
+      width: 80%;
+      h3 {
+        font-size: 1.75em;
+        font-weight: $ff-700;
+      }
+      p {
+        font-size: 1.25em;
+        font-weight: $ff-300;
       }
     }
-  }
-
-  &__container {
-    height: 72vh;
-  }
-
-  &__list {
-    background-color: $font-color;
-    color: $bg-color;
-    height: 90%;
-    border-top: 4px $color-tertiary-light solid;
-    overflow: scroll;
-    margin-top: -6px;
-    margin-bottom: 4vh;
-    &-item {
-      display: flex;
-      height: 20%;
-      align-items: center;
-      padding: 10px 5px;
-      justify-content: space-between;
+    &-img {
+      width: 20%;
       img {
-        width: 12%;
-      }
-      .shops__info {
-        padding: 5px 10px;
-        width: 60%;
-        h6 {
-          font-size: 1.5rem;
-        }
-        & > p {
-          // color: #ff4466;
-        }
-      }
-      & > p {
-        width: 20%;
-        color: #45cd56;
+        width: 90%;
+        aspect-ratio: 1;
+        border-radius: 50%;
       }
     }
   }
-  &__tabs {
+  &__coupons {
+    height: 35vh;
+    padding: 20px 0;
     display: flex;
-    justify-content: center;
-    // margin-bottom: 8px;
-    h3 {
-      margin-right: 40px;
-      font-size: 2rem;
-      position: relative;
-      padding: 5px 15px;
-      color: $color-tertiary-light;
-      &.selected {
-        border-radius: 5px;
-        color: $color-primary;
-        background-color: $font-color;
-        border: 4px $color-tertiary-light solid;
-        border-bottom: 4px $font-color solid;
+    overflow: hidden;
+  }
+  &__coupon {
+    min-height: 110%;
+    min-width: 50%;
+    background-color: $clr-accent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px 20px;
+    color: $font-color;
+    // text-align: center;
+    position: relative;
+    margin: 0 20px 0 0;
+    z-index: 4;
+    &:nth-child(2) {
+      // text-align: end;
+      background-color: $clr-accent-2;
+      margin-top: 15%;
+      margin-left: -30%;
+      z-index: 3;
+    }
+    &:nth-child(3) {
+      // text-align: end;
+      background-color: $clr-primary;
+      margin-top: 30%;
+      margin-left: -30%;
+      z-index: 2;
+    }
+    .coupon-logo {
+      height: 20%;
+    }
+    .coupon-location {
+      font-weight: $ff-300;
+      font-size: 0.75em;
+    }
+    .coupon-name {
+      padding-top: 10px;
+      font-weight: $ff-400;
+      font-size: 1.25em;
+    }
+    .coupon_bottom {
+      position: absolute;
+      // bottom: 10%;
+      bottom: 0;
+      padding: 10px 20px;
+      left: 0;
+      right: 0;
+    }
+    .coupon-value {
+      font-size: 1.3em;
+      font-weight: 400;
+      padding: 10px 0;
+    }
+    .coupon-expiry {
+      font-weight: $ff-300;
+    }
+  }
+
+  &__buttons {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    isolation: isolate;
+    &:before {
+      content: "";
+      background-color: white;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: calc(100% + 20px);
+      transform: translateX(-10px);
+    }
+  }
+  &__button {
+    width: 20%;
+    .button-icon {
+      margin: 0 auto;
+      background-color: $font-color;
+      color: $bg-color;
+      padding: 20px;
+      border-radius: 50%;
+      max-width: 60px;
+      max-height: 60px;
+      min-width: 50px;
+      min-height: 50px;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        transform: scale(1.25);
+        @media (max-width:300px) {
+          transform: scale(1);
+        }
+      }
+    }
+    .button-name {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 1.1em;
+    }
+  }
+  &__transactions {
+    padding-top: 10px;
+    position: relative;
+    isolation: isolate;
+    padding: 0 10px;
+    width: calc(100% + 20px);
+    transform: translateX(-10px);
+    background-color: white;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      h3 {
+        font-size: 1.5em;
+        font-weight: $ff-400;
+      }
+    }
+    &-list {
+      max-height: 45vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      &-item {
+        width: 100%;
+        display: flex;
+        padding: 10px 0;
+        .img {
+          width: 20%;
+          padding: 10px 0;
+          background-color: #F3F5F5;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 60%;
+            aspect-ratio: 1;
+          }
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          width: 55%;
+          padding: 0 15px;
+          .name {
+            font-weight: 400;
+            font-size: 1.1em;
+          }
+          .expiry {
+            font-size: .8em;
+            font-weight: 300;
+          }
+        }
+        .value {
+          // font-size: 1.25em;
+          font-weight: $ff-400;
+          padding-right: 15px;
+          width: 25%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
       }
     }
   }
