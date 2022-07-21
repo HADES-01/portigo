@@ -15,7 +15,7 @@ const GameCard = ({ item }) => {
         alt={item.title}
       />
       <Box className="library__card-details">
-        <Link overlay underline="none" href={`.${item.gameSrc}`}>
+        <Link overlay underline="none" href={`/gamePage`}>
           <p className="library__card-name" fontWeight="md">
             {item.gameName}
           </p>

@@ -5,6 +5,7 @@
   width: 100vw;
   padding: 4vw;
   padding-bottom: 0;
+  overflow: hidden;
   &__header {
     // width: 90%;
     margin: 0 auto;
@@ -34,33 +35,47 @@
     height: 35vh;
     padding: 20px 0;
     display: flex;
-    overflow: hidden;
+    width: 110%;
+    // // overflow-x: visible;
+    // overflow-y: hidden;
+    // overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    animation: carousel 12s forwards infinite;
   }
   &__coupon {
-    min-height: 110%;
+    min-height: 100%;
     min-width: 50%;
     background-color: $clr-accent;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     padding: 10px 20px;
     color: $font-color;
-    // text-align: center;
+    text-align: center;
     position: relative;
     margin: 0 20px 0 0;
     z-index: 4;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+    // animation: popUp 2s ease-in-out forwards;
     &:nth-child(2) {
-      // text-align: end;
       background-color: $clr-accent-2;
-      margin-top: 15%;
-      margin-left: -30%;
+      // margin-top: 15%;
+      // margin-left: -30%;
       z-index: 3;
+      animation-delay: 2s;
     }
     &:nth-child(3) {
-      // text-align: end;
       background-color: $clr-primary;
-      margin-top: 30%;
-      margin-left: -30%;
+      // margin-top: 30%;
+      // margin-left: -30%;
       z-index: 2;
+      animation-delay: 4s;
+    }
+    &:nth-child(4) {
+      background-color: $clr-accent;
+      // margin-top: 45%;
+      // margin-left: -30%;
+      z-index: 1;
+      animation-delay: 6s;
     }
     .coupon-logo {
       height: 20%;
@@ -126,7 +141,7 @@
       justify-content: center;
       svg {
         transform: scale(1.25);
-        @media (max-width:300px) {
+        @media (max-width: 300px) {
           transform: scale(1);
         }
       }
@@ -165,7 +180,7 @@
         .img {
           width: 20%;
           padding: 10px 0;
-          background-color: #F3F5F5;
+          background-color: #f3f5f5;
           border-radius: 10px;
           display: flex;
           align-items: center;
@@ -186,7 +201,7 @@
             font-size: 1.1em;
           }
           .expiry {
-            font-size: .8em;
+            font-size: 0.8em;
             font-weight: 300;
           }
         }
@@ -201,5 +216,32 @@
         }
       }
     }
+  }
+}
+
+@keyframes carousel {
+  0% {
+    transform: translate(0);
+  }
+  30% {
+    transform: translate(calc(-35% - 2 * 20px));
+  }
+  60% {
+    transform: translate(calc(-80% - 2 * 20px));
+  }
+  90% {
+    transform: translate(calc(-120% - 2 * 20px));
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes popUp {
+  50% {
+    height: 110%;
+  }
+  100% {
+    height: 100%;
   }
 }

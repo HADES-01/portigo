@@ -10,7 +10,7 @@ const libraryGrid = ({ categoryName, dataList }) => {
     <div className="library__grid">
       <div className="library__grid-header">
         <h3>{categoryName}</h3>
-        <p>More > </p>
+        {/* <p>More > </p> */}
       </div>
       <Box className="library__grid-carousel">
         {dataList.map((item, index) => (

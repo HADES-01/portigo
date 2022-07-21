@@ -4,6 +4,8 @@ import { useIdleTimer } from "react-idle-timer";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Link from "@mui/joy/Link";
+import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
 
 const GamePage = () => {
   const [elapsed, setElapsed] = useState(0);
@@ -54,9 +56,15 @@ const GamePage = () => {
     checkModalOpen(elapsed);
     // eslint-disable-next-line
   }, [elapsed]);
-
+  const navigate = useNavigate();
   return (
-    <div className="gameContainer">
+    <div className="  gameContainer">
+      <CloseIcon
+        id="close"
+        onClick={() => {
+          navigate(-1);
+        }}
+      />
       <iframe
         title="Mini Game"
         className="miniGameFrame"
@@ -66,23 +74,6 @@ const GamePage = () => {
         scrolling="none"
         frameBorder="0"
       ></iframe>
-      {/* <iframe
-        title="Mini Game"
-        width="100%"
-        height="100vh"
-        className="miniGameFrame"
-        allow="fullscreen; autoplay; encrypted-media"
-        src="https://games.construct.net/4032/latest"
-        frameBorder="0"
-        allowFullScreen={true}
-        msallowfullscreen="true"
-        mozallowfullscreen="true"
-        webkitallowfullscreen="true"
-        allowpaymentrequest="false"
-        referrerPolicy="unsafe-url"
-        sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups"
-        scrolling="no"
-      ></iframe> */}
       <Modal open={open} onClose={handleClose} aria-labelledby="time-up-modal">
         <Box sx={style}>
           <p>

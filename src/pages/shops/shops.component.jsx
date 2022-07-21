@@ -4,13 +4,18 @@ import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
 import ComputerIcon from "@mui/icons-material/Computer";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { shops } from "../../data/shopList";
+import { useNavigate } from "react-router";
 
 function Shops() {
-  
+  const navigate = useNavigate();
   return (
     <div className="shops">
       <div className="shops__header">
+        <p className="back_button" onClick={() => navigate(-1)} style={{paddingRight: 20}}>
+          <ArrowBackIcon />
+        </p>
         <div className="shops__header-name">
           <h3>Hello Sarang</h3>
           <p>Happy New Year 🎉</p>
@@ -23,7 +28,7 @@ function Shops() {
         </div>
       </div>
       <div className="shops__coupons">
-        {shops.slice(0, 3).map((shop, idx) => (
+        {shops.slice(0, 4).map((shop, idx) => (
           <div className="shops__coupon" key={idx}>
             <img src={shop.src} alt={shop.name} className="coupon-logo" />
             <p className="coupon-name">{shop.name}</p>
@@ -76,7 +81,7 @@ function Shops() {
                 <p className="name">{shop.name}</p>
                 <p className="expiry">02 Jan, 2002</p>
               </div>
-              <p className="value">$ {shop.points}</p>
+              <p className="value">₹ {shop.points}</p>
             </div>
           ))}
         </div>

@@ -18,15 +18,16 @@
     width: 120%;
     transform: translateX(-10%);
     background-color: white;
-// padding: 5px 0;
     height: 6vh;
     text-align: center;
-    a,button {
-      padding: 5px;
+    a,
+    button {
       background-color: $clr-primary;
+      padding: 5px;
       border: none;
       outline: none;
-      font-size: 1.3em;
+      font-size: 1.1em;
+      letter-spacing: 1.5px;
       font-weight: $ff-700;
       color: $font-color;
       width: 100%;
@@ -43,6 +44,7 @@
       position: absolute;
       // inset: 0;
       height: 50%;
+      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -61,6 +63,16 @@
         font-size: 3.3em;
         span {
           font-size: 1.5rem;
+        }
+        #add-icon,
+        #subtract-icon {
+          height: 1.5rem;
+        }
+        #add-icon {
+          margin-left: 20px;
+        }
+        #subtract-icon {
+          margin-right: 20px;
         }
       }
       p:not(.value) {
@@ -90,6 +102,20 @@
         font-size: 1.2rem;
       }
     }
+    &-search {
+      text-align: center;
+      width: 100%;
+      // height: 50px;
+      input[type="text"] {
+        margin-block: 5px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        border: 1px solid black;
+        outline: none;
+      }
+    }
   }
 }
 
@@ -109,6 +135,11 @@
   .selected {
     background-color: $clr-primary;
   }
+
+  .wallet__button > a,
+  .wallet__button > a > button {
+    background-color: $clr-primary;
+  }
 }
 
 #accent {
@@ -126,6 +157,11 @@
   .selected {
     background-color: $clr-accent;
   }
+
+  .wallet__button > a,
+  .wallet__button > a > button {
+    background-color: $clr-accent;
+  }
 }
 
 #accent-2 {
@@ -141,6 +177,11 @@
     stroke: $clr-accent-2;
   }
   .selected {
+    background-color: $clr-accent-2;
+  }
+
+  .wallet__button > a,
+  .wallet__button > a > button {
     background-color: $clr-accent-2;
   }
 }

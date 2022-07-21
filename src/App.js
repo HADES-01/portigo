@@ -6,17 +6,40 @@ import Library from "./pages/library";
 import "./App.scss";
 import GamePage from "./pages/game";
 import GamePage2 from "./pages/game/gamePage2";
+import { useEffect, useState } from "react";
+import Recommend from "./pages/recommend/recommend";
 
 function App() {
+  const [walletMoney, setWalletMoney] = useState(0);
+  const setMoney = (val) => {
+    setWalletMoney(val);
+    localStorage.setItem("money", val);
+  };
+  useEffect(() => {
+    var localMoney = parseInt(localStorage.getItem("money"));
+    console.log(localMoney);
+    if (!localMoney) {
+      localStorage.setItem("money", 0);
+      localMoney = 0;
+    }
+    setMoney(localMoney);
+  }, []);
   return (
-    <BrowserRouter basename="/portigo">
+    <BrowserRouter>
       <Routes>
-        <Route path="/wallet" element={<Wallet />} />
+        <Route
+          path="/wallet"
+          element={<Wallet money={walletMoney} addMoney={setMoney} />}
+        />
         <Route path="/shops" element={<Shops />} />
         <Route exact path="/" element={<Home />} />
         <Route exact path="/library" element={<Library />} />
-        <Route exact path="/gamePage" element={<GamePage />} />
-        <Route exact path="/gamePage2" element={<GamePage2 />} />
+        <Route exact path="/recommend" element={<Recommend />} />
+        <Route
+          exact
+          path="/gamePage"
+          element={<GamePage2 money={walletMoney} />}
+        />
       </Routes>
     </BrowserRouter>
   );
