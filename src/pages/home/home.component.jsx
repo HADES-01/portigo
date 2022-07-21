@@ -11,7 +11,7 @@ function Home() {
     <div className="home">
       <div className="home__header">
         <h4>Portigo</h4>
-        <img src={Logo2} alt="logo2" />
+        {/* <img src={Logo2} alt="logo2" /> */}
       </div>
       <div className="home__banner">
         {/* <Logo /> */}

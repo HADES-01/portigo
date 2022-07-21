@@ -21,7 +21,7 @@ const GamePage2 = ({ money }) => {
 
   const checkModalOpen = (elapsed) => {
     let minutes = Math.round(elapsed / 1000) / 60;
-    if (minutes >= 0.1) {
+    if (minutes >= 0.5) {
       handleOpen();
     }
   };
