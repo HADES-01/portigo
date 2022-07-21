@@ -38,9 +38,7 @@ function Wallet({ money, addMoney }) {
           <ArrowBackIcon />
         </p>
         <h3>Sarang's Wallet</h3>
-        <p>
-          <MoreVertIcon />
-        </p>
+        <p>{/* <MoreVertIcon /> */}</p>
       </div>
       <div className="wallet__money">
         <CircularProgressbarWithChildren
@@ -68,7 +66,7 @@ function Wallet({ money, addMoney }) {
             </p>
             {/* <p>Out of $8684</p> */}
           </div>
-          <div className="wallet__money-filters">
+          {/* <div className="wallet__money-filters">
             <p
               className={id === "accent" && "selected"}
               onClick={() => setId("accent")}
@@ -87,10 +85,10 @@ function Wallet({ money, addMoney }) {
             >
               Y
             </p>
-          </div>
+          </div> */}
           <div id="inner" style={{ width: "94%" }}>
             <CircularProgressbar
-              value={id === "primary" ? 20 : id === "accent" ? 40 : 60}
+              value={(money / 300) * 100}
               width={"90%"}
               strokeWidth={2}
               circleRatio={0.75}
@@ -104,7 +102,7 @@ function Wallet({ money, addMoney }) {
       </div>
       <div className="wallet__history">
         <div className="wallet__history-header">
-          <h3>History</h3>
+          <h3>Your Coupons</h3>
           <span
             onClick={() => {
               setOpen(!open);
@@ -135,7 +133,7 @@ function Wallet({ money, addMoney }) {
                 </div>
                 <div className="details">
                   <p className="name">{shop.name}</p>
-                  <p className="expiry">02 Jan, 2002</p>
+                  <p className="expiry">Expires 02 Jan, 2002</p>
                 </div>
                 <p className="value">₹ {shop.points}</p>
               </div>

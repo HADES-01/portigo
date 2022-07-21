@@ -6,6 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import Link from "@mui/joy/Link";
 import "./library.styles.scss";
 
 const Library = () => {
@@ -63,6 +64,14 @@ const Library = () => {
       )}
       <div className="library__games">
         {categories.length ? categories : <p> OOPSS!!! Not Found </p>}
+      </div>
+      <div className="library__footer">
+        <button>
+          <Link href="/shops">Get Coupons</Link>
+        </button>
+        <button>
+          <Link href="/wallet">Add Money</Link>
+        </button>
       </div>
     </div>
   );

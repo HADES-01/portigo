@@ -35,47 +35,72 @@
     height: 35vh;
     padding: 20px 0;
     display: flex;
-    width: 110%;
-    // // overflow-x: visible;
+    width: 100%;
+    // overflow-x: visible;
     // overflow-y: hidden;
     // overflow: hidden;
+    // overflow: scroll;
     position: relative;
     isolation: isolate;
-    animation: carousel 12s forwards infinite;
+    // transform: translateX(20%);
+    transition: transform 0.5s;
+    // animation: carousel 12s forwards infinite;
+
+    &-back,
+    &-next {
+      position: absolute;
+      height: 30%;
+      top: 50%;
+      // border-radius: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      z-index: 10;
+      width: 40px;
+      height: 20%;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.3);
+      outline: none;
+      // color: transparent;
+    }
+
+    &-next {
+      left: auto;
+      right: 0px;
+    }
   }
   &__coupon {
     min-height: 100%;
-    min-width: 50%;
+    min-width: 60%;
     background-color: $clr-accent;
     border-radius: 10px;
     padding: 10px 20px;
     color: $font-color;
     text-align: center;
     position: relative;
-    margin: 0 20px 0 0;
-    z-index: 4;
+    margin: 0 40px 0 0;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+    // z-index: 4;
     // animation: popUp 2s ease-in-out forwards;
     &:nth-child(2) {
       background-color: $clr-accent-2;
       // margin-top: 15%;
       // margin-left: -30%;
-      z-index: 3;
-      animation-delay: 2s;
+      // z-index: 3;
+      // animation-delay: 2s;
     }
     &:nth-child(3) {
       background-color: $clr-primary;
       // margin-top: 30%;
       // margin-left: -30%;
-      z-index: 2;
-      animation-delay: 4s;
+      // z-index: 2;
+      // animation-delay: 4s;
     }
     &:nth-child(4) {
       background-color: $clr-accent;
       // margin-top: 45%;
       // margin-left: -30%;
-      z-index: 1;
-      animation-delay: 6s;
+      // z-index: 1;
+      // animation-delay: 6s;
     }
     .coupon-logo {
       height: 20%;
@@ -83,6 +108,11 @@
     .coupon-location {
       font-weight: $ff-300;
       font-size: 0.75em;
+    }
+    .coupon-code {
+      margin-top: 10px;
+      padding: 20px;
+      font-size: 1.3em;
     }
     .coupon-name {
       padding-top: 10px;
@@ -170,7 +200,7 @@
       }
     }
     &-list {
-      max-height: 45vh;
+      // max-height: 45vh;
       overflow-y: scroll;
       overflow-x: hidden;
       &-item {

@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "../library/library.styles.scss";
 import { recommend_action, recommend_kids } from "../../data/gamesList";
 import { useEffect } from "react";
+import Link from "@mui/joy/Link";
 
 function Recommend() {
   const navigate = useNavigate();
@@ -81,6 +82,14 @@ function Recommend() {
       )}
       <div className="library__games">
         {categories.length ? categories : <p> OOPSS!!! Not Found </p>}
+      </div>
+      <div className="library__footer">
+        <button>
+          <Link href="/shops">Get Coupons</Link>
+        </button>
+        <button>
+          <Link href="/wallet">Add Money</Link>
+        </button>
       </div>
     </div>
   );
