@@ -4,7 +4,7 @@ import Wallet from "./pages/wallet/wallet.component";
 import Shops from "./pages/shops/shops.component";
 import Library from "./pages/library";
 import "./App.scss";
-import GamePage from "./pages/game";
+// import GamePage from "./pages/game";
 import GamePage2 from "./pages/game/gamePage2";
 import { useEffect, useState } from "react";
 import Recommend from "./pages/recommend/recommend";
