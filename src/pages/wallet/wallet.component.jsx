@@ -66,7 +66,7 @@ function Wallet({ money, addMoney }) {
               {money}
               <AddIcon id="add-icon" onClick={inc} />
             </p>
-            <p>Out of $8684</p>
+            {/* <p>Out of $8684</p> */}
           </div>
           <div className="wallet__money-filters">
             <p
