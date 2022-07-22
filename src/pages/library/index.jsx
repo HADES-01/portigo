@@ -5,7 +5,8 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import RedeemIcon from "@mui/icons-material/Redeem";
 import Link from "@mui/joy/Link";
 import "./library.styles.scss";
 
@@ -67,10 +68,16 @@ const Library = () => {
       </div>
       <div className="library__footer">
         <button>
-          <Link href="/shops">Get Coupons</Link>
+          <Link href="/shops">
+            Get Coupons
+            {/* <RedeemIcon /> */}
+          </Link>
         </button>
         <button>
-          <Link href="/wallet">Add Money</Link>
+          <Link href="/wallet">
+            {/* <CurrencyRupeeIcon /> */}
+            Add Money
+          </Link>
         </button>
       </div>
     </div>
