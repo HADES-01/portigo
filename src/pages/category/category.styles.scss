@@ -1,0 +1,26 @@
+@import "/src/styles/colors";
+
+.category {
+  padding: 4vw;
+  &__header {
+    // background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    h3 {
+      padding: 0 20px;
+      text-align: center;
+      font-size: 1.5em;
+      width: 90%;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1px;
+    // justify-content: space-evenly;
+  }
+}

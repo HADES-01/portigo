@@ -11,8 +11,8 @@ body {
   font-size: $font-size;
   color: $font-color;
   font-family: $font-family;
-  background-color: $bg-color;
-  overflow: scroll;
+  background-color: #05492b53;
+  // overflow: scroll;
   @media (max-width:300px) {
     font-size: 10px;
   }

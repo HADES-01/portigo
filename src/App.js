@@ -8,6 +8,7 @@ import "./App.scss";
 import GamePage2 from "./pages/game/gamePage2";
 import { useEffect, useState } from "react";
 import Recommend from "./pages/recommend/recommend";
+import VendorAdmin from "./pages/vendor-admin/vendor-admin.component";
 
 function App() {
   const [walletMoney, setWalletMoney] = useState(0);
@@ -33,13 +34,14 @@ function App() {
         />
         <Route path="/shops" element={<Shops />} />
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/library" element={<Library />} />
+        <Route exact path="/library/*" element={<Library />} />
         <Route exact path="/recommend" element={<Recommend />} />
         <Route
           exact
           path="/gamePage"
           element={<GamePage2 money={walletMoney} />}
         />
+        <Route path="/vendorAdmin" element={<VendorAdmin />} />
       </Routes>
     </BrowserRouter>
   );

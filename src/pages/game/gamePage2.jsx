@@ -7,11 +7,13 @@ import adBanner from "../../images/tgp-ad-banner.jpg";
 import CloseIcon from "@mui/icons-material/Close";
 import Link from "@mui/joy/Link";
 import { useNavigate } from "react-router-dom";
+import LoginPopup from "../../components/login-popup/login-popup.component";
 
 const GamePage2 = ({ money }) => {
   const [elapsed, setElapsed] = useState(0);
   const { getElapsedTime, reset } = useIdleTimer();
   const [open, setOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
@@ -71,12 +73,13 @@ const GamePage2 = ({ money }) => {
           <img src={adBanner} alt="Ad Banner" className="adBannerImage" />
           <p className="ad-free">
             Wanna Enjoy Ad Free?
-            <Link href="/wallet" className="ctaAction">
+            <span className="ctaAction" onClick={() => setOpenModal(true)}>
               Recharge Now
-            </Link>
+            </span>
           </p>
         </Box>
       </Modal>
+      <LoginPopup open={openModal} handleClose={() => setOpenModal(false)} dest="wallet"/>
     </div>
   );
 };

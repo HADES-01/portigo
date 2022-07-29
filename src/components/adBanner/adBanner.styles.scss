@@ -1,0 +1,35 @@
+@import url("/src/styles/_colors.scss");
+
+.adBanner {
+  height: 8vh;
+  width: 100vw;
+  position: fixed;
+  margin-left: -4vw;
+  background-color: #006439;
+  bottom: 0;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  color: white;
+  &__img {
+    background-color: white;
+    height: 80%;
+    // width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-inline-start: .8vh;
+    margin-inline-end: 2vh;
+    img {
+      height: 100%;
+    }
+  }
+  &__offer {
+    h4 {
+      font-size: 1.1em;
+    }
+    p {
+      font-size: .8em;
+      color: white;
+    }
+  }
+}

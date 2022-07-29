@@ -4,13 +4,16 @@ import React from "react";
 import Box from "@mui/joy/Box";
 import GameCard from "../gameCard";
 import "./libraryGrid.styles.scss";
+import { useNavigate } from "react-router-dom";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-const libraryGrid = ({ categoryName, dataList }) => {
+const LibraryGrid = ({ categoryName, dataList }) => {
+  const navigation = useNavigate();
   return (
     <div className="library__grid">
-      <div className="library__grid-header">
+      <div className="library__grid-header" onClick={() => navigation(`${categoryName.toLowerCase()}`)}>
         <h3>{categoryName}</h3>
-        {/* <p>More > </p> */}
+        <p><ChevronRightIcon /></p>
       </div>
       <Box className="library__grid-carousel">
         {dataList.map((item, index) => (
@@ -21,4 +24,4 @@ const libraryGrid = ({ categoryName, dataList }) => {
   );
 };
 
-export default libraryGrid;
+export default LibraryGrid;

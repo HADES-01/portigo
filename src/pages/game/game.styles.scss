@@ -30,6 +30,7 @@
   min-height: 150px;
   text-align: center;
   background-color: black;
+  outline: none;
 }
 
 .ad-free {
@@ -116,8 +117,8 @@
   position: absolute;
   z-index: 3;
   left: 0;
-  background-color: lightgray;
-  color: skyblue;
+  background-color: white;
+  color: black;
 }
 
 #close {
@@ -170,6 +171,7 @@
 // }
 
 .ctaAction {
+  margin-left: 6px;
   color: $clr-primary !important;
   text-decoration: none;
 }

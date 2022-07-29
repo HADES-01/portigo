@@ -5,13 +5,16 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
-import RedeemIcon from "@mui/icons-material/Redeem";
+import { Route, Routes } from "react-router";
 import Link from "@mui/joy/Link";
 import "./library.styles.scss";
+import Category from "../category/category.component";
+import AdBanner from "../../components/adBanner/adBanner.component";
+import LoginPopup from "../../components/login-popup/login-popup.component";
 
 const Library = () => {
   const navigate = useNavigate();
+  const [openModal, setOpenModal] = useState(false);
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const onChange = (e) => {
@@ -80,8 +83,19 @@ const Library = () => {
           </Link>
         </button>
       </div>
+      <AdBanner handleOpen={() => setOpenModal(true)}/>
+      <LoginPopup open={openModal} handleClose={() => setOpenModal(false)} dest="shops"/>
     </div>
   );
 };
 
-export default Library;
+const library = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Library />} />
+      <Route path="/:category" element={<Category />} />
+    </Routes>
+  );
+};
+
+export default library;
