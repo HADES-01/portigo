@@ -3,10 +3,11 @@ import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { shops } from "../../data/shopList";
 import Coupon from "../../components/coupon/coupon.component";
-import TouchAppIcon from '@mui/icons-material/TouchApp';
-import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import InsightsIcon from '@mui/icons-material/Insights';
+import TouchAppIcon from "@mui/icons-material/TouchApp";
+import ChangeCircleIcon from "@mui/icons-material/ChangeCircle";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import InsightsIcon from "@mui/icons-material/Insights";
+import Statcards from "../../components/stat-card/stat-cards.components";
 
 function VendorAdmin() {
   const shop = shops[0];
@@ -65,51 +66,26 @@ function VendorAdmin() {
             <h1>Advertisments Stats</h1>
           </div>
           <div className="stats__stats">
-            <div className="statcard">
-              <div className="statcard-body">
-                <span className="statcard-name">
-                  <VisibilityIcon />
-                  Impressions
-                </span>
-                <span className="statcard-value">45</span>
-              </div>
-            </div>
-            <div className="statcard">
-              <div className="statcard-body">
-                <span className="statcard-name">
-                  <TouchAppIcon />
-                  Clicks
-                </span>
-                <span className="statcard-value">32</span>
-              </div>
-            </div>
-            <div className="statcard">
-              <div className="statcard-body">
-                <span className="statcard-name">
-                  <ChangeCircleIcon />
-                  Conversions
-                </span>
-                <span className="statcard-value">20</span>
-              </div>
-            </div>
-            <div className="statcard">
-              <div className="statcard-body">
-                <span className="statcard-name">
-                  <CurrencyRupeeIcon />
-                  Cost
-                </span>
-                <span className="statcard-value">5034</span>
-              </div>
-            </div>
-            <div className="statcard">
-              <div className="statcard-body">
-                <span className="statcard-name">
-                  <InsightsIcon />
-                  Click Rate 
-                </span>
-                <span className="statcard-value">34%</span>
-              </div>
-            </div>
+            <Statcards value={45}>
+              <VisibilityIcon />
+              Impressions
+            </Statcards>
+            <Statcards value={34}>
+              <TouchAppIcon />
+              Clicks
+            </Statcards>
+            <Statcards value={23}>
+              <ChangeCircleIcon />
+              Conversions
+            </Statcards>
+            <Statcards value={323.43}>
+              <CurrencyRupeeIcon />
+              Cost
+            </Statcards>
+            <Statcards value={"34%"}>
+              <InsightsIcon />
+              Click Rate
+            </Statcards>
           </div>
         </div>
       </div>

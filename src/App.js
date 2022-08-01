@@ -9,6 +9,7 @@ import GamePage2 from "./pages/game/gamePage2";
 import { useEffect, useState } from "react";
 import Recommend from "./pages/recommend/recommend";
 import VendorAdmin from "./pages/vendor-admin/vendor-admin.component";
+import Analytics from "./pages/analytics/analytics.component";
 
 function App() {
   const [walletMoney, setWalletMoney] = useState(0);
@@ -42,6 +43,7 @@ function App() {
           element={<GamePage2 money={walletMoney} />}
         />
         <Route path="/vendorAdmin" element={<VendorAdmin />} />
+        <Route path="/analytics" element={<Analytics />} />
       </Routes>
     </BrowserRouter>
   );

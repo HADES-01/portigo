@@ -1,0 +1,110 @@
+@import "/src/styles/colors";
+
+.analytics {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  @media (min-width: 1600px) {
+    max-width: 1500px;
+    max-height: 843px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 35px rgba($color: #000000, $alpha: 0.35);
+  }
+  &__side {
+    width: 20%;
+    height: 100%;
+    background-color: $clr-accent-2;
+    padding: 3% 1%;
+    .side {
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+          width: 85%;
+        }
+      }
+      &__list {
+        height: 40%;
+        margin-top: 30%;
+        // padding: 0 5%;
+      }
+      &__nav {
+        font-size: 1.2em;
+        height: 100%;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        &-item {
+          opacity: 0.7;
+          cursor: pointer;
+          padding: 15px 20px;
+          list-style-type: none;
+          border-radius: 10px;
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+          &:hover {
+            background-color: $clr-primary;
+            opacity: 0.8;
+          }
+          &#selected {
+          background-color: $clr-primary;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &__main {
+    height: 100%;
+    width: 80%;
+    background-color: #eeeeee;
+    padding: 1% 2%;
+    overflow: auto;
+    .overall {
+      font-size: .9em;
+      &:not(:nth-child(1)) {
+        margin-top: 60px;
+        &:not(:nth-child(2)) {
+          margin-top: 30px;
+        }
+      }
+      &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        h1 {
+          font-size: 1.6em;
+          margin-left: 20px;
+        }
+      }
+      &__body {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-evenly;
+        &-chart {
+          height: 100%;
+          width: 40%;
+          text-align: center;
+          h3 {
+            margin-top: 10px;
+          }
+        }
+      }
+      &__stats {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
+  }
+}
