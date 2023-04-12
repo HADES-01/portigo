@@ -4,7 +4,18 @@
   background-color: white;
   padding: 4vw;
   overflow: hidden;
+  @media (min-width: 786px) {
+    padding-top: 1vw;
+    padding-inline: 1vw;
+  }
   padding-bottom: 10vh;
+  &__games {
+    @media (min-width: 786px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
   .wallet__history-search {
     text-align: left;
     input[type="text"] {
@@ -27,10 +38,18 @@
     justify-content: space-between;
     align-items: center;
     // padding-bottom: 30px;
+    .back_button {
+      @media (min-width: 786px){
+        display: none;
+      }
+    }
     h3 {
       padding: 0 20px;
       text-align: center;
       font-size: 1.5em;
+      @media (min-width: 786px) {
+        font-size: 2.5em;
+      }
       // width: 80%;
     }
   }
